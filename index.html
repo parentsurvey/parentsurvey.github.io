@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Parent Survey for Biking and Walking to School">
+    <meta name="author" content="Teng Heong Ng">
+    <title>Parent Survey for Biking and Walking to School</title>
+	
+	<link rel="shortcut icon" type=image/png href="img/bike_tiny.png" />
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/stylesheet.css" rel="stylesheet">
+	
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+	
+	<!-- Fixed navbar -->
+    <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="navbarHeader" class="navbar-brand page-scroll" href="#backtop">
+			<img src="img/bike_white.png" align="left" style="margin-right: 10px;" width="30" height="30" alt="">
+			Parent Survey for Biking and Walking to School
+		  </a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a class="page-scroll" href="#top">Dashboard</a></li>
+            <li><a class="page-scroll" href="#method">Methodology</a></li>
+            <li><a class="page-scroll" href="#about">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+	
+	<a id="backtop"></a>
+	<div class="jumbotron">
+		<div id= "title" class="container text-left">
+			<br><br><br><br><br><br><br><br><br><br><br><br>
+			<h1>Parent Survey for Biking and Walking to School</h1>
+			<p>A survey for the City of Monona</p>
+		</div>
+	</div>
+	<a id="top"></a>
+	<!-- Dashboard -->
+    <div class="container" onload="drawChart()">
+	<!-- Dashboard row of columns 1-->
+		<div class="row">
+			<h2>Introduction</h2>
+			<p>The University of Wisconsin-Madison Urban and Regional Planning Workshop Course conducted a survey of parents whose children attended one or more school in Monona. The survey identifies the commute behavior of students in Monona to and back from school such as time, distance, and mode of transportation. The survey finds out why or why not the parents letting their children to walk or bike to and back from school. The result also reveals roads or intersection where parents expressed concerns for the safety of their children. Ultimately, the survey aims to shed some light on potential improvement to ensure safe route to school for the children in the City of Monona.</p>
+		
+			<p>From Nov 14, 2016 to Dec 1, 2016, we collected a total of 287 responses from the parents of the students who attended the following school(s):</p>	
+				<ol>
+					<li><a href="http://www.mononagrove.org/we/" target="_blank">Winnequah Elementary School</a> (WES)</li>
+					<li><a href="http://www.mononagrove.org/mghs/" target="_blank">Monona Grove High School</a> (MGHS)</li>
+					<li><a href="http://www.ihmcatholicparish.org/" target="_blank">Immaculate Heart of Mary Catholic School</a> (IHoMCS)</li>
+					<li><a href="https://nmcs.madison.k12.wi.us/" target="_blank">Nuestro Mundo Community School</a> (NMCS)</li>
+					<li><a href="http://www.mononagrove.org/altschool/" target="_blank">Monona Grove 21st Century Charter School</a> (MG21)</li>
+				</ol>
+		</div>
+		<center>
+			<div class="container">
+				<div id="chart_div1"></div>
+				<p class="text-muted">Response rate: 92.33% (265 out of 287 parents )</p>
+			</div>
+		</center>
+		<hr class="featurette-divider" />
+		<center>
+			<p class="text-muted"> Figure 1 shows survey response number by schools. Due to high participation rate from WES and MGHS, they reflect majority of voices in this survey.</p> 
+		</center>
+		<hr class="featurette-divider" />
+		<!-- Dashboard row of columns Traveling Time and Distance-->
+		<h2>Traveling distance</h2>
+		<center>
+			<div class="container">
+				<div id="chart_div2"></div>
+				<p class="text-muted">Response rate: 91.64% (263 out of 287 parents )</p>								
+			</div>
+		</center>
+		<hr class="featurette-divider" />
+		<center>
+			<p class="text-muted">Potentially, the children who live less than 1 mile (48.7%) can walk to school in 20 minutes at a walking speed of 3 miles per hour(mph). In addition, the students who live less than 2 miles (71.90%) can bike to school in 15 minutes at a 8mph biking speed.</p>
+		</center>
+		<hr class="featurette-divider" />
+		
+		<!-- Dashboard row of columns Traveling Time and Distance-->
+		<div class="row">
+			<h2>Traveling time</h2>
+			<div class="col-md-6">
+				<h3 class="text-center">Going to School</h3>
+				<div id="chart_div3"></div>
+				<p class="text-muted">Response rate: 91.29% (262 out of 287 parents )</p>
+			</div>
+			<div class="col-md-6">
+				<h3 class="text-center">Coming Back from School</h3>
+				<div id="chart_div4"></div>
+				<p class="text-muted">Response rate: 92.33% (265 out of 287 parents )</p>
+			</div>
+			
+		</div>
+		<hr class="featurette-divider" />
+		<center>
+			<p class="text-muted">Figure 3 and Figure 4 show traveling time to and from school. Generally, children spend more time traveling from school than traveling to school. 6.3% more children spend more than 20 minutes traveling from school than traveling to school. 4.8% less children spend less than 10 minutes traveling back from than traveling to school.</p>
+		</center>
+		<hr class="featurette-divider" />
+		
+		<!-- Dashboard row of columns Transportation General-->
+		
+		<h2> Mode of transportation</h2>
+		<center>
+			<div id="chart_div7"></div>
+			
+			<p class="text-muted">Response rate: 92.33% (265 out of 287 parents )</p>
+			<hr class="featurette-divider" />
+			<p class="text-muted">More children take school bus, car pool, or walk back from school than go to school (see Figure 5). At the same time, there are 9.05% less children coming back from school by family vehicle than going to school. In other words, parents who sent their children to school in the morning let their children either walk, or take school bus or car pool to come back from school.</p>
+		</center>
+		<hr class="featurette-divider" />
+		<p>Since we are more concerned about safe route to school which involved children biking or walking, the mode of transportation is aggregated into two categories: Bike, walk, others and school bus, family vehicle, carpool, or transit.</p>
+		<div class="row">
+		
+			
+			<div class="col-md-6">
+				<h3 class="text-center">Going to School</h3>
+				<div id="chart_div6"></div>
+			</div>
+			<div class="col-md-6">
+				<h3 class="text-center">Coming Back from School</h3>
+				<div id="chart_div8"></div>
+			</div>
+			<center>
+				<p class="text-muted">Response rate: 92.33% (265 out of 287 parents )</p>
+				<hr class="featurette-divider" />
+				<p class="text-muted">Figure 6 and Figure 7 show the mode of transportation going to and coming back from school. Compared to going to school, bike, walk, others category increased by 5.7% when children comng back from school.</p>
+				<hr class="featurette-divider" />
+			</center>
+		</div>
+
+		<center>
+			<div>
+				<button id="btnBySchool" type="button" class="btn btn-lg btn-default center">By School</button>
+				<!--<button id="btnByGrade" type="button" class="btn btn-lg btn-default center">By Time</button> -->
+				<button id="btnByDistance" type="button" class="btn btn-lg btn-default center">By Distance</button>
+			</div>
+		</center>
+		
+		<!-- Dashboard row of columns Transportation by School-->
+		<div id="bySchool" class="row">
+			<div class="col-md-6">
+			    <h3 class="text-center">Going to School</h3>
+			    <div id="chart_div9" ></div>
+				<br />
+			</div>
+			<div class="col-md-6">
+			    <h3 class="text-center">Coming Back from School</h3>
+				<div id="chart_div10"></div>
+				<br />
+			</div>
+			<hr class="featurette-divider" />
+			<center>
+				<p class="text-muted">Figure 8 and 9 shows mode of transportation to back from school categorized by school. For WES, 2.25% more children coming back from school by walk, bike, or others compared to going to school. For MGHS, 11.34% more children going back from school by walk, bike, or others compared to going to school. 4.55% more children who go to IHoMCS bike, walk, or others back from school compared to going school. NHCS and MG21 have more children bike and walk to school than go to school by school bus, family vehicle, carpool, or city bus. NMCS and MG21 have the same mode of transportation going to and coming back from school.</p>
+			</center>
+			<hr class="featurette-divider" />
+		</div>
+
+		
+		<!-- Dashboard row of columns Transportation by Grade
+		<div id="byGrade" class="row hidden">
+			<h2>Mode of Transportation by Time</h2>
+			<div class="col-md-6">
+			    <h3>Going to school</h3>
+			    <div id="chart_div11" ></div>
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			</div>
+			<div class="col-md-6">
+			    <h3>Coming back from School</h3>
+				<div id="chart_div12" ></div>
+				<p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			</div>
+		</div> -->
+		
+		<!-- Dashboard row of columns Transportation by Distance-->
+		<div id="byDistance" class="row hidden">
+			<div class="col-md-6">
+				<h3 class="text-center">Going to School</h3>
+			    <div id="chart_div13" ></div>
+				<br>				
+			</div>
+			<div class="col-md-6">
+				<h3 class="text-center">Coming Back from School</h3>
+			    <div id="chart_div19" ></div>	
+				<br>
+			</div>
+			<hr class="featurette-divider" />
+			<p class="text-muted">The shorter the distance from home to school, more children choose to bike, walk, or other to and from school(see Figure 10 and Figure 11).</p>
+			<hr class="featurette-divider" />
+		</div>
+		
+		<!-- Dashboard row of columns Children safety Safety-->
+		<div class= "container">
+			<div class="row">
+				<h2>How safe parents feel about route to school?</h2>
+				<div class="col-md-6">
+					<h3 class="text-center">DO Walk or Bike</h3>
+					<div id="chart_div14" ></div>
+					<p>For children who walk or bike to school, 80.36% of the parents feel the route to school is somewhat safe or very safe, and 19.65% of the parents feel the route to school is not at all safe or somewhat unsafe (see Figure 13).</p>
+					
+				</div>
+				<div class="col-md-6">
+					<h3 class="text-center">DO NOT Walk or Bike</h3>
+					<div id="chart_div15" ></div>
+					<p>For children who DO NOT walk or bike to school, only 33.17% of the parents feel the route to school is somewhat safe or very safe, and 58.54% of the parents feel the route to school is not at all safe or somewhat unsafe (see Figure 14).</p>
+				</div>
+			</div>
+		</div>
+		<hr class="featurette-divider" />
+		<center>
+			<p class="text-muted"> Since children who DO NOT walk or bike live further away from school, we can conclude that the longer the distance, the parents feel the route to school is more unsafe.</p>
+		</center>
+		<hr class="featurette-divider" />
+		
+		<!-- Dashboard row of columns Safety concerns-->
+		
+		<div class="container">
+			<h2>Why or why not bike or walk to school?</h2>
+			<p>The following are the top five factors that influence parents decision in letting their children to walk or bike to school. Also, whether the parents would allow their children to walk or bike to school if the issued improved. See detailed breakdown in Figure 15, Figure 16, and Figure 17.</p>
+			<!-- Dashboard row of columns Top Concerns-->
+			<div class="row">				
+				<div class="col-md-4">
+					<h3 class="text-center">Walk or Bike</h3>
+					<ol>
+						<li>Speed of traffic along route</li>
+						<li>Distance from home to school</li>
+						<li>Amount of traffic along route</li>
+						<li>Weather</li>
+						<li>Sidewalks or pathways</li>
+					</ol>
+				</div>
+				<div class="col-md-4">
+					<h3 class="text-center">DO NOT Walk or Bike</h3>
+
+					<ol>
+						<li>Amount of traffic along route</li>
+						<li>Speed of traffic along route</li>
+						<li>Weather</li>
+						<li>Child's age</li>
+						<li>Sidewalks or pathways</li>
+					</ol>
+				</div>
+				<div class="col-md-4">
+					<h3 class="text-center">If Improved, allow Walk or Bike</h3>
+
+					<ol>
+						<li>Amount of traffic along route</li>
+						<li>Speed of traffic along route</li>
+						<li>Sidewalks or pathways</li>
+						<li>Crossing guards</li>
+						<li>Adult's accompaniment</li>
+					</ol>
+				</div>
+			</div>
+			<hr class="featurette-divider" />
+				<center>
+					<p class="text-muted">Sidewalks or pathways, speed, and amount of traffic along routes should be our major focus to improve safe route to school since they are the recuring themes in the results.</p>
+				</center>
+				<hr class="featurette-divider" />
+			<center>
+				<h3>Walk or Bike</h3>
+					<div>
+						<div id="chart_div16"></div>
+						<p class="text-muted">Response rate: 50.93%-60.62% (172-174 out of 287 parents )</p>
+					</div>
+			</center>
+
+			<br />
+			<center>
+				<h3>DO NOT Walk or Bike</h3>
+				<div>
+					<div id="chart_div17"></div>
+					<p class="text-muted">Response rate: 50.93%-60.62% (172-174 out of 287 parents )</p>
+				</div>
+			</center>
+			
+			<div>
+				<h3 class="text-center">If improved, allow Walk or Bike</h3>
+				<div id="chart_div18"></div>
+				<center>
+				<p class="text-muted">Response rate: 58.19%-59.58% (167-171 out of 287 parents )</p>
+				</center>
+			</div>
+		</div>
+		<hr class="featurette-divider" />
+		<!-- Dashboard row of quote chart 2 -->		
+		<div class="container">
+		<h2>Most important reason children do not walk or bike to school</h2>
+		<p>The parents also vote the most important reason their children do not walk or bike to school:</p>
+			<div id="chart_div21" ></div>
+			<center>
+			<p class="text-muted">Response rate: 55.40% (159 out of 287 parents )</p>				
+			</center>
+		</div>
+		<!-- story map-->
+		<div class="container">
+			<h2>Roads and intersection where Parents have Safety Concerns </h2>
+			<p> 79.35% of the parents agree that certain area or intersection have safety concerns. The following map summarizes frequency of those roads or intersection mentioned by the parents:</p>
+			<br>
+			<iframe src="https://www.google.com/maps/d/u/0/embed?mid=15xlOmL9HsiRBfYwJ0f8MAyt6htY" width="100%" height="600"></iframe>
+			<hr class="featurette-divider" />
+			<center>
+				<p class="text-muted">Out of the 119 comments from parents about area or intersection in Monona with safety concerns, the most frequently mentioned road is Winnequah Road (26 times), the next highest mentioned road is Monona Drive (16 times). </p>
+			</center>
+			<hr class="featurette-divider" />
+		</div>
+		<!-- Dashboard row of quote chart 1 -->		
+		<div class="container">
+		<h2>What are the top issues mentioned in the comments?</h2>
+			<div id="chart_div20" ></div>
+			<center>
+			<p class="text-muted">Response rate: 47.73% (137 out of 287 parents )</p>	
+			</center>
+		</div>
+		<hr class="featurette-divider" />
+		
+		<!-- story map-->
+		<div class="container">
+			<h2>What Do Parents Think about Monona's Roads?</h2>
+			<p> The following are some of the comments from parents about the roads in Monona:</p>
+			<br/>
+			<iframe src="https://uploads.knightlab.com/storymapjs/ddeada4b1da1d649326c4d9f736bf374/mononas-trouble-intersections/index.html" frameborder="0" width="100%" height="600"></iframe>
+		</div>
+		<hr class="featurette-divider" />
+		<!-- Conclusion-->
+		<div class="container">
+			<h2>Conclusion</h2>
+			<p> </p>
+			<br/>
+		</div>
+				
+		
+		<hr class="featurette-divider" />
+	</div>
+	
+	<a id="method"></a>
+	<hr class="featurette-divider" />
+	
+	<!--Methodology -->
+	<div class="container">
+		<h2>Methodology</h2>
+		<p>This survey is adopted from the <a href="http://www.saferoutesinfo.org/sites/default/files/resources/Parent_Survey_English.pdf" target="_blank">Parent Survey about Walking and Biking to School</a> by the <a href="http://www.saferoutesinfo.org" target="_blank">National Center for Safe Routes to School</a> for both English and Spanish version. This survey is distributed to five participating schools in the City of Monona using <a href=" https://survey.wisc.edu/" target="_blank">UW-Madison Qualtrics Survey Hosting Service</a>. The survey result is analyzed and displayed through this website.</p>
+	</div>
+	<hr class="featurette-divider" />
+	
+	<!-- About -->
+	<div class="container">
+		<a id="about"></a>
+		<h2>About</h2>
+		<p>This survey is carried out by the graduate students from <a href="https://www.urpl.wisc.edu/" target="_blank">Department of Urban and Regional Planning</a> at the <a href="https://wisc.edu/" target="_blank">University of Wisconsin-Madison</a>. The survey is one of the tasks in PL 912: Planning Workshop under <a href="http://univercity.wisc.edu/" target="_blank"> UniverCity Year</a> project, a year-long partnership between UW-Madison and the City of Monona. Under the supervision of faculty, students collaborate with City of Monona to work on issues in housing and transportation.</p>
+		<br />
+		<h3>Project Member</h3>
+		<p><a href="https://tengheong.wordpress.com/" target="_blank">Teng Heong Ng</a> is a graduate student from the Department of Urban and Regional Planning at the University of Wisconsin-Madison. She specializes in environmental planning and Geographic Information System (GIS).</p>
+		<p><a href="https://uwphi.pophealth.wisc.edu/about/staff/charron-lisa.htm" target="_blank">Lisa Charron</a> is a graduate student from the Department of Urban and Regional Planning at the University of Wisconsin-Madison.</p>
+		<p><a href="https://www.linkedin.com/in/zachchappell" target="_blank">Zachary Chappell </a> is a graduate student from the Department of Urban and Regional Planning at the University of Wisconsin-Madison.</p>
+		
+		<br />
+		<h3>Credits</h3>
+		<p>We would like to thank the following group of people:</P>
+		<p>
+			<ul>
+				<li><a href= "http://urpl.wisc.edu/people/paulsen" target="_blank">Kurt Paulsen </a> and Brad Bruun for the guidance,</li>
+				<li>Participating schools,</li>
+				<li>Participating parents for the valuable input.</li>
+			<ul>
+		</p>
+	</div>
+	<div class="container">
+		<h3>Resource</h3>
+		<p>
+			<ul>
+				<li><a href="resource/survey.pdf" target="_blank">Parent survey for biking and walking to school (modified)</a></li>
+			</ul>
+		</P>
+	</div>
+	<br>
+
+	<!-- footer-->
+	<footer>
+		<div class="container" id="footer">
+			<p class="pull-right"><a href="#backtop"><img src="img\backtop.png" alt="Back to top" height="40" width="40"></a></p>
+			<p>&copy; 2016  URPL 912: Planning Workshop</p>
+			<p>Disclaimer: The views and opinions expressed in this website are those of the author and do not necessarily reflect the official policy or position of any agency.</p>
+		</div>
+	</footer>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+	<!-- call Google Chart-->
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script src="js/chart.js"></script>
+  </body>
+</html>

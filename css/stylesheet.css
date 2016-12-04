@@ -1,0 +1,83 @@
+p, li, h2, h3{
+    font-family: "Helvetica", "Verdana", serif;
+}
+
+p, li, #navbarHeader {
+	font-size: 1.2em;
+}
+
+#navbar{
+	background-color: #C52026;
+}
+
+#navbarHeader {
+	color: white;
+}
+
+.nav.navbar-nav.navbar-right li a {
+	color: white;
+}
+
+.nav.navbar-nav.navbar-right li a:hover{
+	background-color: #9B1B1E;
+}
+
+.row{
+	padding-top:30px;
+	padding-bottom:30px;
+	
+}
+.jumbotron{
+	height: 800px;
+    margin-bottom: 0px;
+    background-image: url(../img/biking.jpg);
+    background-position: 0% 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+	color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+}
+
+#title{
+	text-align: center;
+}
+
+/* Featurettes
+------------------------- */
+
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+a {
+	color:#C52026;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+	color:#9B1B1E;
+}
+
+
+/* footer*/
+footer {
+	margin: 0;
+	padding: 0;
+	height: 150px;
+	background-color:#282728;
+	color:#adadad;
+	border-top:#c5050c;
+	border-width:4px;
+	font-size: 1em;
+}
+
+#footer{
+	padding-top: 30px;
+	
+}
