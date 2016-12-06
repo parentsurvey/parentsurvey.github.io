@@ -460,7 +460,7 @@ function drawTopConcernsNotAllowStacked() {
         ["Amount of traffic along route", 156, 14, 3],
         ["Speed of traffic along route", 153, 16, 3],
 		["Weather", 145, 24, 3],
-        ["Child's age", 143, 25, 3],
+        ["Age of children", 143, 25, 3],
         ["Sidewalks or pathways", 142, 23, 6],
 		["Distance from home to school", 132, 38, 4],
 		["Crossing guards", 131, 31, 10],
@@ -565,7 +565,7 @@ function drawQuote2Chart(){
     data.addRows([
       ["Distance", 31],
 	  ["Traffic", 22],
-	  ["Age", 22],
+	  ["Age of children", 22],
 	  ["Lack of sidewalks", 17],
 	  ["Safety", 13],
 	  ["Schedule/time", 12],

@@ -1,11 +1,44 @@
-p, li, h2, h3{
+@font-face{
+	font-family:"Agency FB Regular";
+	src:url('../fonts/AGENCYR.ttf')format('truetype');
+}
+
+h1{
+	font-family: Helvetica, serif;
+}
+
+#title{
+	font-family: "Century Schoolbook", serif;
+	letter-spacing: 3px;
+}
+p, li{
     font-family: "Helvetica", "Verdana", serif;
+}
+
+h2{
+    font-family: Agency FB Regular, serif;
+	font-size: 60px;
+	font-style: bold;
+}
+
+.result{
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+	font-style: light;
+	letter-spacing: -1.5px;
+}
+h3{
+    font-family: "Agency FB Regular", serif;
+	font-size: 30px;
 }
 
 p, li, #navbarHeader {
 	font-size: 1.2em;
 }
 
+#transparent{
+	color: transparent;
+}
 #navbar{
 	background-color: #C52026;
 }
@@ -23,9 +56,8 @@ p, li, #navbarHeader {
 }
 
 .row{
-	padding-top:30px;
-	padding-bottom:30px;
-	
+	padding-top:0px;
+	padding-bottom:0px;
 }
 .jumbotron{
 	height: 800px;
